@@ -26,14 +26,20 @@ A custom-made SCSS utility library inspired by Tailwind CSS. This library provid
 
 ``@import "scss/utils.scss";``
 
+Or just link the compiled CSS in your HTML:
+
+```html
+<link rel="stylesheet" href="styles/utils.css">
+```
+
 2) Use the predefined utility classes in your HTML or extend them as needed.
 
 Example
 
 ```html
 <div class="container mx-auto p-4">
-<h1 class="text-center text-xl">Welcome to SCSS Utilities</h1>
-<p class="text-left mt-2">This is an example of using utility classes.</p>
+  <h1 class="text-center text-xl">Welcome to SCSS Utilities</h1>
+  <p class="text-left mt-2">This is an example of using utility classes.</p>
 </div>
 ```
 
