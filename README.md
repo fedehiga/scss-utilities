@@ -24,12 +24,14 @@ A custom-made SCSS utility library inspired by Tailwind CSS. This library provid
 
 1) Import the main SCSS file into your project:
 
-``@import "scss/utils.scss";``
+```css
+@import "scss/utils.scss";
+```
 
 Or just link the compiled CSS in your HTML:
 
 ```html
-<link rel="stylesheet" href="styles/utils.css">
+<link rel="stylesheet" href="output/utils.css">
 ```
 
 2) Use the predefined utility classes in your HTML or extend them as needed.
@@ -47,11 +49,11 @@ Example
 
 ### Commands
 
-*Development Mode*: Automatically compiles SCSS files and watches for changes.
+**Development Mode**: Automatically compiles SCSS files and watches for changes.
 
 ``npm run dev``
 
-Build for Production: Compiles and minifies SCSS files for production.
+**Build for Production**: Compiles and minifies SCSS files for production.
 
 ``npm run build``
 
@@ -64,7 +66,7 @@ scss-utils/
 │   ├── properties.scss   # Utility class definitions  
 │   ├── engine.scss  # Core mixins and logic  
 │   └── config.scss # Configuration settings  
-├── styles/
+├── output/  
 │   └── utils.css  # Compiled CSS output  
 ├── gulpfile.babel.js   # Gulp tasks for building and watching  
 ├── package.json # Project metadata and dependencies  

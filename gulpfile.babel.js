@@ -16,7 +16,7 @@ export const styles = () => {
     .pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
     .pipe(gulpif(PRODUCTION, cleanCss()))
     // .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-    .pipe(dest("./styles/"));
+    .pipe(dest("./output/"));
 };
 
 export const watchForChanges = () => {
