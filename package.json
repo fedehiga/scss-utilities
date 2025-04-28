@@ -1,0 +1,29 @@
+{
+  "name": "scssutils",
+  "version": "1.0.0",
+  "description": "Custom made SCSS library with utility classes like Tailwind",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --prod"
+  },
+  "keywords": [],
+  "author": "Federico Higashino",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/register": "^7.15.3",
+    "autoprefixer": "^10.3.7",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-purgecss": "^4.0.3",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.3.9",
+    "sass": "^1.32.8",
+    "yargs": "^17.2.1"
+  }
+}

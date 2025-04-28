@@ -1,0 +1,77 @@
+@import "../config";
+
+$textAlign: (
+        left: left,
+        right: right,
+        center: center,
+        start: start,
+        end: end
+);
+
+$textDecoration: (
+        none:none,
+        underline:underline
+);
+
+$textTransform: (
+        lowercase:lowercase,
+        uppercase:uppercase
+);
+
+$whiteSpace: (
+        nowrap:nowrap,
+        wrap:wrap
+);
+
+$listStyleType: (
+        none: none,
+        disc: disc,
+        decimal: decimal
+);
+
+$lineHeight: (
+        normal: normal,
+        '1': 1,
+        '1-125': 1.125,
+        '1-25': 1.25,
+        '1-375': 1.375,
+        '1-5': 1.5,
+        '1-75': 1.75,
+        '2': 2
+);
+
+
+$fontSize: ();
+@for $i from 3 through $fontSizeCount {
+   $fontSize: map-merge($fontSize, (#{$i}:#{$i * 0.25rem}));
+};
+
+$sizes: (
+        "3-4": 0.875,
+        "4-5": 1.125,
+);
+
+@each $size, $val in $sizes {
+        $fontSize: map-merge($fontSize, (#{$size}:#{$val}rem));
+}
+      
+
+$weights: (
+        400: 400,
+        500: 500,
+        600: 600,
+        700: 700,
+        800: 800
+);
+
+$fontWeight: ();
+
+@each $weight, $val in $weights {
+        $fontWeight: map-merge($fontWeight, (#{$weight}:#{$val}));
+}
+
+
+$fontStyle: (
+        italic:italic,
+        normal:normal
+);

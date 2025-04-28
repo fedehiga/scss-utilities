@@ -1,0 +1,62 @@
+@import "variables";
+@import "engine";
+
+/****************** Properties ******************/
+@include utility($class: "bg-size", $source: $backgroundSizes, $attribute: "background-size");
+@include utility($class: "z-index", $source: $zIndex, $attribute: "z-index", $mode: (important:true));
+@include utility($class: "whiteSpace", $source: $whiteSpace, $attribute: "white-space", $mode: (important:true));
+@include utility($class: "list-style", $source: $listStyleType, $attribute: "list-style-type");
+@include utility($class: "position", $source: $position, $attribute: "position");
+@include utility($class: "overflow", $source: $overflow, $attribute: "overflow");
+@include utility($class: "lh", $source: $lineHeight, $attribute: "line-height");
+
+/****************** Box Style Properties ******************/
+@include utility($class: "shadow", $source: $boxShadows, $attribute: "box-shadow");
+@include utility($class: "border", $source: $borderStyle, $attribute: "border-style");
+@include utility($class: "border-b", $source: $borderStyle, $attribute: "border-bottom-style", $mode: (responsive:true));
+@include utility($class: "border-t", $source: $borderStyle, $attribute: "border-top-style", $mode: (responsive:true));
+@include utility($class: "border-s", $source: $borderStyle, $attribute: "border-left-style", $mode: (responsive:true));
+@include utility($class: "border-e", $source: $borderStyle, $attribute: "border-right-style", $mode: (responsive:true));
+@include utility($class: "border", $source: $borderWidth, $attribute: "border-width");
+@include utility($class: "radius", $source: $borderRadius, $attribute: "border-radius");
+@include utility($class: "w", $source: $width, $attribute: "width", $mode: (important:true));
+@include utility($class: "h", $source: $height, $attribute: "height", $mode: (important:true));
+
+/****************** Typography Properties ******************/
+@include utility($class: "text", $source: $textAlign, $attribute: "text-align", $mode: (responsive:true, important:true));
+@include utility($class: "text-decoration", $source: $textDecoration, $attribute: "text-decoration", $mode: (important:true));
+@include utility($class: "text", $source: $textTransform, $attribute: "text-transform", $mode: (important:true));
+@include utility($class: "fs", $source: $fontSize, $attribute: "font-size", $mode: (responsive:true));
+@include utility($class: "f-style", $source: $fontStyle, $attribute: "font-style");
+@include utility($class: "fw", $source: $fontWeight, $attribute: "font-weight");
+
+/****************** Flexbox Properties ******************/
+@include utility($class: "d", $source: $display, $attribute: "display", $mode: (responsive:true));
+@include utility($class: "flex", $source: $flexDirection, $attribute: "flex-direction", $mode: (responsive:true));
+@include utility($class: "flex", $source: $flexWrap, $attribute: "flex-wrap", $mode: (responsive:true));
+@include utility($class: "justify", $source: $justifyContent, $attribute: "justify-content", $mode: (responsive:true));
+@include utility($class: "items", $source: $alignItems, $attribute: "align-items", $mode: (responsive:true));
+@include utility($class: "align-content", $source: $alignContent, $attribute: "align-content", $mode: (responsive:true));
+@include utility($class: "align-self", $source: $alignSelf, $attribute: "align-self", $mode: (responsive:true));
+@include utility($class: "grow", $source: $grow, $attribute: "flex-grow", $mode: (responsive:true));
+
+/****************** Gap Spacer Properties ******************/
+@include utility($class: "gap", $source: $spacer, $attribute: "gap", $mode: (responsive:true));
+
+/****************** Margin Spacer Properties ***************/
+@include utility($class: "m", $source: $spacer, $attribute: "margin", $mode: (responsive:true, important:true));
+@include utility($class: "mt", $source: $spacer, $attribute: "margin-top", $mode: (responsive:true, important:true));
+@include utility($class: "mb", $source: $spacer, $attribute: "margin-bottom", $mode: (responsive:true, important:true));
+@include utility($class: "ms", $source: $spacer, $attribute: "margin-left", $mode: (responsive:true, important:true));
+@include utility($class: "me", $source: $spacer, $attribute: "margin-right", $mode: (responsive:true, important:true));
+@include utility($class: "mx", $source: $spacer, $attribute: ("margin-right", "margin-left"), $mode: (responsive:true, important:true));
+@include utility($class: "my", $source: $spacer, $attribute: ("margin-top", "margin-bottom"), $mode: (responsive:true, important:true));
+
+/****************** Padding Spacer Properties **************/
+@include utility($class: "p", $source: $spacer, $attribute: "padding", $mode: (responsive:true, important:true));
+@include utility($class: "pt", $source: $spacer, $attribute: "padding-top", $mode: (responsive:true, important:true));
+@include utility($class: "pb", $source: $spacer, $attribute: "padding-bottom", $mode: (responsive:true, important:true));
+@include utility($class: "ps", $source: $spacer, $attribute: "padding-left", $mode: (responsive:true, important:true));
+@include utility($class: "pe", $source: $spacer, $attribute: "padding-right", $mode: (responsive:true, important:true));
+@include utility($class: "px", $source: $spacer, $attribute: ("padding-right", "padding-left"), $mode: (responsive:true, important:true));
+@include utility($class: "py", $source: $spacer, $attribute: ("padding-top", "padding-bottom"), $mode: (responsive:true, important:true));

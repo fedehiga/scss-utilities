@@ -1,0 +1,22 @@
+@import "sizes";
+
+/* Container */
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// $breakpoint: map-get($responsive $val);
+
+@each $key in map-keys($responsive){
+  $max-val: map-get($container, $key);
+  $breakpoint: map-get($responsive, $key);
+    @media($breakpoint){
+      .container {
+        max-width: $max-val
+      }
+    }
+}
+      

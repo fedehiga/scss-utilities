@@ -1,0 +1,20 @@
+/* purgecss start ignore */
+/* Description: Custom made SCSS library with utility classes like Tailwind
+/* Author: Federico Higashino
+/* https://github.com/fedehiga/scss-utilities
+/* Date: 2025-04-28
+/* Version: 1.0.0
+/* This file is used to import all the variables and mixins
+/* purgecss end ignore */
+
+@import "variables/borders";
+@import "variables/box-style";
+@import "variables/background-sizes";
+@import "variables/flex-system";
+@import "variables/overflow";
+@import "variables/position";
+@import "variables/sizes";
+@import "variables/spacer";
+@import "variables/text";
+@import "variables/z-index";
+@import "variables/container";

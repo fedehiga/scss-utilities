@@ -1,0 +1,21 @@
+@import "../config";
+
+$borderWidth: (
+        0: 0,
+        1: 1px,
+        2: 2px,
+        3: 3px,
+);
+
+$borderStyle: (
+        solid: solid,
+        none: none,
+);
+
+$borderRadius: (
+        full: 100%,
+        circle: 50%,
+);
+@for $i from 1 through 3 {
+$borderRadius: map-merge($borderRadius, (#{$i}:#{$i}rem));
+}

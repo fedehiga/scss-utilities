@@ -1,0 +1,33 @@
+@import "variables/sizes";
+@mixin modifiers($map, $attribute, $pseudo:"" , $important:false, $prefix: "-", $separator: "-", $base: "") {
+  @each $key, $value in $map {
+    @if $value and not($value == ()) {
+      &#{if($key != $base, #{$prefix}#{$key}, '')}#{if(type-of($value) != "map",'#{$pseudo}','')} {
+        @if type-of($value) == "map" and length($value) {
+          @include modifiers($value, $attribute, $pseudo, $important, $prefix, $separator, $base);
+        } @else {
+          @each $property in $attribute {
+            #{$property}: #{if($important == true,#{$value} !important , #{$value})};
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin utility($class, $source, $attribute, $mode:()) {
+  /* simple class */
+  .#{$class} {
+    @include modifiers($source, $attribute);
+  }
+
+  @if (map-get($mode, responsive)) {
+    @each $name, $key in $responsive {
+      @media screen and (#{$key}) {
+        .#{$name}\:#{$class} {
+          @include modifiers($source, $attribute);
+        }
+      }
+    }
+  }
+}
