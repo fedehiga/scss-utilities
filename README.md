@@ -51,18 +51,18 @@ Build for Production: Compiles and minifies SCSS files for production.
 
 ### File Structure
 
-scss-utils/
-├── scss/
-│   ├── variables/       # SCSS variables for customization
-│   ├── [utils.scss](http://_vscodecontentref_/0)       # Main entry point for utilities
-│   ├── [properties.scss](http://_vscodecontentref_/1)  # Utility class definitions
-│   ├── [engine.scss](http://_vscodecontentref_/2)      # Core mixins and logic
-│   └── [config.scss](http://_vscodecontentref_/3)      # Configuration settings
+scss-utils/  
+├── scss/  
+│   ├── variables/       # SCSS variables for customization  
+│   ├── utils.scss      # Main entry point for utilities  
+│   ├── properties.scss   # Utility class definitions  
+│   ├── engine.scss  # Core mixins and logic  
+│   └── config.scss # Configuration settings  
 ├── styles/
-│   └── [utils.css](http://_vscodecontentref_/4)        # Compiled CSS output
-├── [gulpfile.babel.js](http://_vscodecontentref_/5)    # Gulp tasks for building and watching
-├── [package.json](http://_vscodecontentref_/6)         # Project metadata and dependencies
-└── [README.md](http://_vscodecontentref_/7)            # Documentation
+│   └── utils.css  # Compiled CSS output  
+├── gulpfile.babel.js   # Gulp tasks for building and watching  
+├── package.json # Project metadata and dependencies  
+└── README.md # Documentation  
 
 ### Customization
 
