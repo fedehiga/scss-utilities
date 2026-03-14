@@ -1,15 +1,15 @@
 $container: (
-  sm:540px,
-  md:728px,
-  lg:984px,
-  xl:1240px,
-  xxl:1496px,
+  sm:530px,
+  md:720px,
+  lg:960px,
+  xl:1200px,
+  /* xxl:1470px, */
 );
 
 $responsive: (
-  sm:'min-width:600px',
+  sm:'min-width:576px',
   md:'min-width:768px',
   lg:'min-width:1024px',
   xl:'min-width:1280px',
-  xxl:'min-width:1536px'
+  /* xxl:'min-width:1512px' */
 );

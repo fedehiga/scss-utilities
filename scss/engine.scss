@@ -1,13 +1,33 @@
 @import "variables/sizes";
-@mixin modifiers($map, $attribute, $pseudo:"" , $important:false, $prefix: "-", $separator: "-", $base: "") {
+@mixin modifiers(
+  $map,
+  $attribute,
+  $pseudo: "",
+  $important: false,
+  $prefix: "-",
+  $separator: "-",
+  $base: ""
+) {
   @each $key, $value in $map {
     @if $value and not($value == ()) {
       &#{if($key != $base, #{$prefix}#{$key}, '')}#{if(type-of($value) != "map",'#{$pseudo}','')} {
         @if type-of($value) == "map" and length($value) {
-          @include modifiers($value, $attribute, $pseudo, $important, $prefix, $separator, $base);
+          @include modifiers(
+            $value,
+            $attribute,
+            $pseudo,
+            $important,
+            $prefix,
+            $separator,
+            $base
+          );
         } @else {
           @each $property in $attribute {
-            #{$property}: #{if($important == true,#{$value} !important , #{$value})};
+            #{$property}: #{if(
+                $important == true,
+                #{$value} !important,
+                #{$value}
+              )};
           }
         }
       }
@@ -15,7 +35,7 @@
   }
 }
 
-@mixin utility($class, $source, $attribute, $mode:()) {
+@mixin utility($class, $source, $attribute, $mode: ()) {
   /* simple class */
   .#{$class} {
     @include modifiers($source, $attribute);
@@ -26,6 +46,52 @@
       @media screen and (#{$key}) {
         .#{$name}\:#{$class} {
           @include modifiers($source, $attribute);
+        }
+      }
+    }
+  }
+}
+
+@mixin utility_bare($source, $attribute, $mode: ()) {
+  $important: if(map-get($mode, important), true, false);
+
+  @each $key, $value in $source {
+    @if type-of($value) == "map" {
+      .#{$key} {
+        @include modifiers($value, $attribute);
+      }
+    } @else {
+      .#{$key} {
+        @each $property in $attribute {
+          #{$property}: #{if(
+              $important == true,
+              #{$value} !important,
+              #{$value}
+            )};
+        }
+      }
+    }
+  }
+
+  @if (map-get($mode, responsive)) {
+    @each $name, $mq in $responsive {
+      @media screen and (#{$mq}) {
+        @each $key, $value in $source {
+          @if type-of($value) == "map" {
+            .#{$name}\:#{$key} {
+              @include modifiers($value, $attribute);
+            }
+          } @else {
+            .#{$name}\:#{$key} {
+              @each $property in $attribute {
+                #{$property}: #{if(
+                    $important == true,
+                    #{$value} !important,
+                    #{$value}
+                  )};
+              }
+            }
+          }
         }
       }
     }

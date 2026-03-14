@@ -1,0 +1,12 @@
+@import "../config";
+
+$cols: (
+  auto: auto,
+);
+
+// generate a value for each column count; zero stays as 0, others become
+// a repeat() expression using minmax(0, 1fr)
+@for $i from 0 through $gridSystemCount {
+  $value: if($i == 0, 0, repeat(#{$i}, minmax(0, 1fr)));
+  $cols: map-merge($cols, (#{$i}: $value));
+}

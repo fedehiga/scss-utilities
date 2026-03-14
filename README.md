@@ -12,17 +12,17 @@ A custom-made SCSS utility library inspired by Tailwind CSS. This library provid
 
 ## Installation
 
-1) Clone the repository
+### 1. Clone the repository
 
 ``git clone https://github.com/fedehiga/scss-utilities.git``
 
-2) Install dependencies
+### 2. Install dependencies
 
 ``npm install``
 
 ## Usage
 
-1) Import the main SCSS file into your project:
+### 1. Import the main SCSS file into your project
 
 ```css
 @import "scss/utils.scss";
@@ -34,7 +34,7 @@ Or just link the compiled CSS in your HTML:
 <link rel="stylesheet" href="output/utils.css">
 ```
 
-2) Use the predefined utility classes in your HTML or extend them as needed.
+### 2. Use the predefined utility classes in your HTML or extend them as needed
 
 Example
 

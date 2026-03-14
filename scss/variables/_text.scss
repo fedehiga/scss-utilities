@@ -19,14 +19,22 @@ $textTransform: (
 );
 
 $whiteSpace: (
+        normal:normal,
         nowrap:nowrap,
-        wrap:wrap
+        wrap:wrap,
+        pre:pre,
+        break-spaces:break-spaces
 );
 
 $listStyleType: (
         none: none,
         disc: disc,
         decimal: decimal
+);
+
+$listStylePosition: (
+        inside: inside,
+        outside: outside
 );
 
 $lineHeight: (
@@ -41,27 +49,31 @@ $lineHeight: (
 );
 
 
-$fontSize: ();
-@for $i from 3 through $fontSizeCount {
-   $fontSize: map-merge($fontSize, (#{$i}:#{$i * 0.25rem}));
-};
-
-$sizes: (
-        "3-4": 0.875,
-        "4-5": 1.125,
+$fontSize: (
+        xs: 0.625rem,
+        sm: 0.75rem,
+        md: 0.875rem,
+        base: 1rem,
+        lg: 1.125rem,
+        xl: 1.25rem,
+        '2xl': 1.5rem,
+        '3xl': 1.75rem,
+        '4xl': 2rem,
+        '5xl': 2.25rem,
+        '6xl': 2.5rem,
+        '7xl': 3rem,
+        /* '8xl': 5rem, */
+        /* '9xl': 8rem, */
 );
-
-@each $size, $val in $sizes {
-        $fontSize: map-merge($fontSize, (#{$size}:#{$val}rem));
-}
       
 
 $weights: (
-        400: 400,
-        500: 500,
-        600: 600,
-        700: 700,
-        800: 800
+        light: 300,
+        regular: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+        extrabold: 800
 );
 
 $fontWeight: ();
@@ -74,4 +86,11 @@ $fontWeight: ();
 $fontStyle: (
         italic:italic,
         normal:normal
+);
+
+
+$fontFamily: (
+        sans: 'var(--font-sans)',
+        serif: 'var(--font-serif)',
+        mono: 'var(--font-mono)'
 );

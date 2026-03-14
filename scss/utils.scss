@@ -1,15 +1,17 @@
 @import "properties";
 
-/* Custom project styles */
+/* Custom additional utilities */
 
-.bg-cover {
-  background-size:cover;
-  background-position: center top;
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
   background-repeat: no-repeat;
 }
 
 .bg-transparent {
-  background: 0 none!important;
+  background: 0 none !important;
 }
 
 .flex-break {
@@ -19,7 +21,7 @@
 }
 
 .top-0 {
-  top: 0
+  top: 0;
 }
 
 .bottom-0 {
@@ -27,7 +29,7 @@
 }
 
 .start-0 {
-  left: 0
+  left: 0;
 }
 
 .end-0 {
