@@ -14,7 +14,7 @@ export const styles = () => {
     .pipe(sass().on("error", sass.logError))
     .pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
     .pipe(gulpif(PRODUCTION, cleanCss()))
-    .pipe(gulpif(PRODUCTION, header('/* Built with scss-utils | <%= new Date().toISOString() %> */\n')))
+    .pipe(gulpif(PRODUCTION, header('/* Built with scss-utils https://github.com/fedehiga/scss-utilities | <%= new Date().toISOString() %> */\n')))
     .pipe(dest("./output/"));
 };
 
