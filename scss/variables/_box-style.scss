@@ -16,7 +16,7 @@ $width: (
         50: 50%,
         66: 66.6666%,
         75: 75%,
-        100: 100%,
+        full: 100%,
         fit:fit-content,
         min:min-content,
         max:max-content
@@ -32,7 +32,7 @@ $height: (
         max:max-content
 );
 
-$ObjectFit: (
+$objectFit: (
         none: none,
         fill:fill,
         cover:cover,

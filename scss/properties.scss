@@ -21,6 +21,7 @@
 @include utility($class: "radius", $source: $borderRadius, $attribute: "border-radius");
 @include utility($class: "w", $source: $width, $attribute: "width", $mode: (important: true));
 @include utility($class: "h", $source: $height, $attribute: "height", $mode: (important: true));
+@include utility($class: "object", $source: $objectFit, $attribute: "object-fit");
 
 /****************** Typography Properties ******************/
 @include utility($class: "text", $source: $textAlign, $attribute: "text-align", $mode: (responsive: true, important: true));
