@@ -18,7 +18,7 @@
 @include utility($class: "border-s", $source: $borderStyle, $attribute: "border-left-style", $mode: (responsive: true));
 @include utility($class: "border-e", $source: $borderStyle, $attribute: "border-right-style", $mode: (responsive: true));
 @include utility($class: "border", $source: $borderWidth, $attribute: "border-width");
-@include utility($class: "radius", $source: $borderRadius, $attribute: "border-radius");
+@include utility($class: "rounded", $source: $borderRadius, $attribute: "border-radius");
 @include utility($class: "w", $source: $width, $attribute: "width", $mode: (important: true));
 @include utility($class: "h", $source: $height, $attribute: "height", $mode: (important: true));
 @include utility($class: "object", $source: $objectFit, $attribute: "object-fit");
