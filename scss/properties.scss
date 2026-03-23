@@ -9,6 +9,7 @@
 @include utility($class: "list", $source: $listStyleType, $attribute: "list-style-type");
 @include utility($class: "list", $source: $listStylePosition, $attribute: "list-style-position");
 @include utility($class: "overflow", $source: $overflow, $attribute: "overflow");
+@include utility($class: "visibility", $source: $visibility, $attribute: "visibility");
 
 /****************** Box Style Properties ******************/
 @include utility($class: "shadow", $source: $boxShadows, $attribute: "box-shadow");
@@ -42,6 +43,8 @@
 @include utility($class: "align-content", $source: $alignContent, $attribute: "align-content", $mode: (responsive: true));
 @include utility($class: "align-self", $source: $alignSelf, $attribute: "align-self", $mode: (responsive: true));
 @include utility($class: "grow", $source: $grow, $attribute: "flex-grow", $mode: (responsive: true));
+@include utility($class: "order", $source: $order, $attribute: "order", $mode: (responsive: true));
+@include utility($class: "basis", $source: $basis, $attribute: "flex-basis", $mode: (responsive: true));
 /****************** Grid columns Properties ******************/
 @include utility($class: "grid-cols", $source: $cols, $attribute: "grid-template-columns", $mode: (responsive: true));
 
