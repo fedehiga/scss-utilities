@@ -9,7 +9,7 @@
 @include utility($class: "list", $source: $listStyleType, $attribute: "list-style-type");
 @include utility($class: "list", $source: $listStylePosition, $attribute: "list-style-position");
 @include utility($class: "overflow", $source: $overflow, $attribute: "overflow");
-@include utility($class: "visibility", $source: $visibility, $attribute: "visibility");
+@include utility($class: "visibility", $source: $visibility, $attribute: "visibility", $mode: (responsive: true));
 
 /****************** Box Style Properties ******************/
 @include utility($class: "shadow", $source: $boxShadows, $attribute: "box-shadow");
