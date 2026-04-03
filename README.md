@@ -94,9 +94,11 @@ In `properties.scss`, you can:
 
 #### Your own custom classes
 
-You can add your own custom css classes in `utils.scss`
+You can add your own custom css classes in the main `utils.scss` file.
 
 ## References
+
+Keep in mind that class names in Tailwind with '/' (like `w-1/4` or `aspect-19/6`) were replaced by '-'. Ex: `w-1-4`, `aspect-16-9`.
 
 ### Display Utilities
 
@@ -117,7 +119,6 @@ You can add your own custom css classes in `utils.scss`
 - `bg-left`, `bg-right`, `bg-center`, `bg-top`, `bg-bottom` - background position
 - `bg-top-left`, `bg-top-right`, `bg-bottom-left`, `bg-bottom-right` - background position (combined)
 - `bg-repeat`, `bg-no-repeat`, `bg-repeat-x`, `bg-repeat-y` - background repeat
-- `bg-transparent` - background colors
 
 ### Z-Index Utilities
 
@@ -236,11 +237,11 @@ You can add your own custom css classes in `utils.scss`
 
 **Align Content** (responsive):
 
-- `align-content-start`, `align-content-end`, `align-content-center`, `align-content-between`, `align-content-around`, `align-content-stretch`
+- `content-start`, `content-end`, `content-center`, `content-between`, `content-around`, `content-stretch`
 
 **Align Self** (responsive):
 
-- `align-self-auto`, `align-self-start`, `align-self-end`, `align-self-center`, `align-self-baseline`, `align-self-stretch`
+- `self-auto`, `self-start`, `self-end`, `self-center`, `self-baseline`, `self-stretch`
 
 **Flex Grow** (responsive):
 
