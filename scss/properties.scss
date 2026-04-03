@@ -1,15 +1,19 @@
+@use "sass:string";
 @import "variables";
 @import "engine";
 
 /****************** Properties ******************/
 @include utility_bare($source: $display, $attribute: "display", $mode: (responsive: true));
+@include utility($class: "overflow", $source: $overflow, $attribute: "overflow");
+@include utility($class: "visibility", $source: $visibility, $attribute: "visibility", $mode: (responsive: true));
 @include utility_bare($source: $position, $attribute: "position");
-@include utility($class: "bg", $source: $backgroundSizes, $attribute: "background-size");
+@include utility($class: "aspect", $source: $aspect, $attribute: "aspect-ratio");
+@include utility($class: "bg", $source: $backgroundSize, $attribute: "background-size");
+@include utility($class: "bg", $source: $backgroundPosition, $attribute: "background-position");
+@include utility($class: "bg", $source: $backgroundRepeat, $attribute: "background-repeat");
 @include utility($class: "z", $source: $zIndex, $attribute: "z-index", $mode: (important: true));
 @include utility($class: "list", $source: $listStyleType, $attribute: "list-style-type");
 @include utility($class: "list", $source: $listStylePosition, $attribute: "list-style-position");
-@include utility($class: "overflow", $source: $overflow, $attribute: "overflow");
-@include utility($class: "visibility", $source: $visibility, $attribute: "visibility", $mode: (responsive: true));
 
 /****************** Box Style Properties ******************/
 @include utility($class: "shadow", $source: $boxShadows, $attribute: "box-shadow");
@@ -26,8 +30,8 @@
 
 /****************** Typography Properties ******************/
 @include utility($class: "text", $source: $textAlign, $attribute: "text-align", $mode: (responsive: true, important: true));
-@include utility($class: "text-decoration", $source: $textDecoration, $attribute: "text-decoration", $mode: (important: true));
-@include utility($class: "text", $source: $textTransform, $attribute: "text-transform", $mode: (important: true));
+@include utility_bare($source: $textDecoration, $attribute: "text-decoration", $mode: (important: true));
+@include utility_bare($source: $textTransform, $attribute: "text-transform", $mode: (important: true));
 @include utility($class: "text", $source: $fontSize, $attribute: "font-size", $mode: (responsive: true));
 @include utility($class: "font", $source: $fontStyle, $attribute: "font-style");
 @include utility($class: "font", $source: $fontWeight, $attribute: "font-weight");
@@ -40,8 +44,8 @@
 @include utility($class: "flex", $source: $flexWrap, $attribute: "flex-wrap", $mode: (responsive: true));
 @include utility($class: "justify", $source: $justifyContent, $attribute: "justify-content", $mode: (responsive: true));
 @include utility($class: "items", $source: $alignItems, $attribute: "align-items", $mode: (responsive: true));
-@include utility($class: "align-content", $source: $alignContent, $attribute: "align-content", $mode: (responsive: true));
-@include utility($class: "align-self", $source: $alignSelf, $attribute: "align-self", $mode: (responsive: true));
+@include utility($class: "content", $source: $alignContent, $attribute: "align-content", $mode: (responsive: true));
+@include utility($class: "self", $source: $alignSelf, $attribute: "align-self", $mode: (responsive: true));
 @include utility($class: "grow", $source: $grow, $attribute: "flex-grow", $mode: (responsive: true));
 @include utility($class: "order", $source: $order, $attribute: "order", $mode: (responsive: true));
 @include utility($class: "basis", $source: $basis, $attribute: "flex-basis", $mode: (responsive: true));

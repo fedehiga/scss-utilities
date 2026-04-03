@@ -4,4 +4,25 @@ $position: (
   absolute: absolute,
   fixed: fixed,
   sticky: sticky
-)
+);
+
+// Position offset utilities 0, 1/2, full, auto for top/right/bottom/left
+$position-offset: (
+  0: 0,
+  '1-2': 50%,
+  full: 100%,
+  auto: auto
+);
+
+@mixin position-offset-utilities() {
+  @each $direction in top, right, bottom, left {
+    @each $key, $value in $position-offset {
+      .#{$direction}-#{$key} {
+        #{$direction}: #{$value};
+      }
+    }
+  }
+}
+
+@include position-offset-utilities();
+

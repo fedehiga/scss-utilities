@@ -1,0 +1,24 @@
+$backgroundSize: (
+        auto: auto,
+        cover: cover,
+        contain: contain
+);
+
+$backgroundRepeat: (
+        repeat: repeat,
+        "no-repeat": no-repeat,
+        "repeat-x": repeat-x,
+        "repeat-y": repeat-y
+);
+
+$backgroundPosition: (
+        left: left,
+        right: right,
+        center: center,
+        top: top,
+        bottom: bottom,
+        "top-left": "top left",
+        "top-right": "top right",
+        "bottom-left": "bottom left",
+        "bottom-right": "bottom right"
+);
